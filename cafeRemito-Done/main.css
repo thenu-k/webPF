@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700;900&display=swap');
+/* Fonts
+font-family: 'Merriweather', serif;
+font-family: 'Lato', sans-serif;
+*/
+
+
+*{
+    margin: 0; border: 0; 
+    font-size: 16px; text-decoration: none; font-weight: 400;
+    list-style: none; 
+    color: inherit; background-color: inherit;
+    font-family: inherit;
+}
+
+.center{
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+}
+
+body, html{
+    width: 100%;  height: fit-content;
+    position: relative;
+}
+
+body{
+    display: flex; flex-direction: column; align-items: center;
+}
+
+/* Nav Bar */
+header{
+    background-color: rgb(10, 21, 23);
+    color: white;
+    position:fixed; z-index: 9999;
+    top: 0; left: 0;
+    font-family: 'Lato', sans-serif;
+}
+header, nav{
+    width: 100%; height: fit-content
+}
+nav.center{
+    justify-content: space-between;
+}
+nav > h1{
+    font-size: 1.5em; font-weight: 900;
+    height: 100%; margin-left: 5vw;
+}
+nav ul{
+    margin: 25px 50px;
+}
+nav  ul  a{
+    display:inline;
+    padding: 5px 0;
+    margin: 0 25px;
+}
+nav a:hover{
+    border-bottom: 1px solid white;
+}
+
+/* Landing Section */
+section.landing{
+    height: 100vh; width: 100%;
+    background-image: url('./assets/landing3.jpg'); background-size: cover;
+    background-position: center; background-repeat: no-repeat;
+    position: relative; z-index: 9;
+    color: white;
+}
+section.landing .intro{
+    position: absolute;
+    left: 10%;
+    display: flex; flex-direction: column;
+    align-items: flex-start;
+}
+section.landing h2{
+    font-size: 8em; font-weight: 900; font-family: 'Lato', sans-serif;
+}
+section.landing p{
+    font-size: 1.2em;
+    font-family: 'Lato', serif; font-weight:600;
+    padding-left: 5px;
+}
+
+@media all and (max-width: 1000px) {
+    section.landing .intro{
+        left: unset;
+        align-items: center;
+    }
+    section.landing h2{
+        font-size: 6em;
+    }
+}
+@media all and (max-width: 500px) {
+    section.landing h2{
+        font-size: 3.5em;
+    }
+}
+
+/* Values Section */
+section.values{
+    width: 100%;
+    background-color: rgb(10, 21, 23);
+    color: white;
+    justify-content: flex-start;
+}
+section.values h3{
+    width: 50%;
+    text-align: left;
+    margin: 175px 0; padding-left: 10%;
+    font-size: 2.2em; font-weight: 900; font-family: 'Lato', sans-serif;
+    line-height: 1.5em;
+}
+
+@media all and (max-width: 1000px) {
+    section.values h3{
+        font-size: 2em;
+        width: 80%;
+    }
+}
+@media all and (max-width: 700px) {
+    section.values h3{
+        font-size: 1.5em;
+        padding-left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* Items Section */
+section.items{
+    width: 100%;
+    background-color: white; color: black;
+}
+section.items .itemsContainer{ 
+    width: 80%;
+    display: flex; flex-direction: column; align-items: flex-start;
+}
+.itemsContainer h3{
+    width: auto;
+    font-size: 2.2em; font-weight: 900; font-family: 'Lato', sans-serif;
+    padding: 150px 0 50px 0;
+}
+.itemsContainer .grid{
+    width: 100%;
+    display: flex;
+    flex-direction: row; justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.grid .grid1, .grid .grid2{
+    flex-grow: 0;
+    flex-shrink: 0;;
+    display: flex;
+    flex-direction: column;
+    width:  40%;
+}
+.menuItem{
+    justify-self: flex-start; 
+    width: 100%; 
+    display: flex; flex-direction: column; 
+    font-family: 'Merriweather', serif;
+    min-height: 100px;
+    margin: 20px 0;
+}
+.menuItem .top{
+    width: 100%;
+    display: flex; flex-direction: row; justify-content: space-between;
+    margin-bottom: 20px
+}
+.itemsContainer a {
+    background-color:  rgb(10, 21, 23); color: white;
+    font-family: 'Lato', sans-serif; font-weight: 900;
+    padding: 25px 50px;
+    margin-bottom: 150px;
+}
+.itemsContainer a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+@media all and (max-width: 700px) {
+    section.items .itemsContainer{
+        align-items: center;
+     }
+    .itemsContainer .grid{
+        flex-direction: column;
+    }
+    .grid .grid1, .grid .grid2{
+        width: 100%;
+    }
+    .itemsContainer h3{
+        font-size: 1.5em;
+    }
+    .menuItem {
+        align-items: center;
+    }
+    .menuItem .top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menuItem .top >h4{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .menuItem  p{
+        max-width: 400px;
+        text-align: center;
+    }
+}
+
+/* Philosophy Section */
+section.phil{
+    width: 100%;
+    background-color: rgb(10, 21, 23);
+    color: white;
+}
+.philContainer{
+    width: 80%;
+    flex-direction: row; justify-content: space-between; 
+    margin: 150px 0;
+}
+section.phil .philImage{
+    height: 40vw; width: 40vw;
+    background-image: url('./assets/phil.jpg');
+    background-position: center; background-repeat: no-repeat; background-size: cover;
+    flex-shrink: 0;
+}
+section.phil .text{
+    width: 40%; height: 40vw;
+    display: flex; flex-direction: column; justify-content: center;
+}
+section.phil .text h3{
+    font-size: 2.2em; font-weight: 900; font-family: 'Lato', sans-serif;
+}
+section.phil .text p{
+    margin-top: 5vw;
+    font-size: 1.4em;
+    font-family: 'Lato', serif; 
+    line-height: 1.6;
+}
+@media all and (max-width: 1000px) {
+    .philContainer{
+        flex-direction: column;
+    }
+    section.phil .philImage{
+        width: 100%; height: 60vw;
+        margin-bottom: 100px;
+    }
+    section.phil .text{
+        height: auto;
+        width: 100%;
+    }
+}
+@media all and (max-width: 700px) {
+    .philContainer{
+        width: 80%;
+    }
+    section.phil .philImage{
+        height: 80vw;
+    }
+    section.phil .text *{
+        text-align: center;
+    }
+    section.phil .text h3{
+        font-size: 1.5em;
+    }
+    section.phil .text p{
+        font-size: 1.2em;
+    }
+}
+
+/* Reservation Section */
+section.book{
+    width: 100%;
+    background-color: white; color: black; font-family: 'Lato', sans-serif;
+}
+section.book .bookContainer{
+    width: 80%; 
+    margin: 150px 0;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+section.book h3{
+    font-size: 2.2em; font-weight: 900; 
+    margin-bottom: 50px;
+}
+section.book p{
+    width: 60%;
+    font-size: 1.4em;
+    margin-bottom: 50px;
+}
+section.book a {
+    background-color:  rgb(10, 21, 23); color: white;
+    font-family: 'Lato', sans-serif; font-weight: 900;
+    padding: 25px 50px;
+}
+section.book a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+@media all and (max-width: 700px) {
+    section.book .bookContainer{
+        align-items: center;
+    }
+    section.book p{
+        width: 100%;
+        text-align: center;
+    }
+    section.book h3{
+        font-size: 1.5em;
+    }
+    section.book p{
+        font-size: 1.2em;
+    }
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    background-color: rgb(10, 21, 23);
+    color: white;
+    font-family: 'Lato', serif; 
+}
+footer .container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 150px 0;
+    padding: 0;
+}
+footer h3{
+    font-size: 2.2em; font-weight: 900; 
+    margin-bottom: 50px;
+}
+footer ul.parent{
+    padding: 0;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+footer ul ul{
+    display: flex; flex-direction: column;
+    padding: 0;
+}
+footer ul.child li{
+    padding: 15px 0;
+}
+footer ul.child p{
+    font-size: 1.2em;
+    font-weight: 500;
+}
